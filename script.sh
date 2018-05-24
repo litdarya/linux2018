@@ -18,7 +18,6 @@ xdotool type $NAME
 xdotool key "alt+s"
 sleep 1
 xdotool key "ctrl+w"
-#xdotool key "alt+F4"
 
 FILE=$(cat ~/$NAME)
 echo "$FILE"
@@ -26,10 +25,7 @@ if [[ $FILE = $SENTENCE ]]; then
 	echo OK
 fi
 
-#test: open the file, add smth and save. then check with cat
-#NWID=$(xdotool search --name "gedit" | head -1)
-#xdotool windowactivate --sync $NWID
-#echo $NWID
+#test: open, add, save, check with cat
 xdotool key "ctrl+o"
 sleep 1
 xdotool type $NAME
